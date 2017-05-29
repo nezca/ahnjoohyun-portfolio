@@ -30,17 +30,9 @@ html(lang='ko')
         a.navbar-brand(href='/') 안주현_리크루#딜
       #myNavbar.collapse.navbar-collapse
         ul.nav.navbar-nav
-          li.dropdown
-            a.dropdown-toggle(data-toggle='dropdown', href='#')
+          li.active
+            a(href='/homeplus') 
               | 데이터를_다_담다#홈플러스
-              span.caret
-            ul.dropdown-menu
-              li
-                a(href='/homeplus_A') /homeplus_A
-              li
-                a(href='/homeplus_B') /homeplus_B
-              li
-                a(href='/homeplus_C') /homeplus_C
           li.dropdown
             a.dropdown-toggle(data-toggle='dropdown', href='#')
               | 브랜드를_다_담다#제주항공
@@ -63,17 +55,11 @@ html(lang='ko')
         // Wrapper for slides
         .carousel-inner(role='listbox')
           .item.active
-            a(href='/')
-              img(src='https://s3.ap-northeast-2.amazonaws.com/ahnjoohyunportfolio/KakaoTalk_20170530_001744874.jpg', width='100%', height='auto')
-              .carousel-caption
-                h3 데이터를_다_담다
-                p #홈플러스
+            a(href='/homeplus')
+              img(src='https://s3.ap-northeast-2.amazonaws.com/ahnjoohyunportfolio/homeplus_id.png', width='100%', height='auto')
           .item
-            a(href='/')
-              img(src='	https://s3.ap-northeast-2.amazonaws.com/ahnjoohyunportfolio/KakaoTalk_20170530_001746628.jpg', width='100%', height='auto')
-              .carousel-caption
-                h3 브랜드를_다_담다
-                p #제주항공          
+            a(href='/jejuair_2000')
+              img(src='https://s3.ap-northeast-2.amazonaws.com/ahnjoohyunportfolio/jejuair_id.png', width='100%', height='auto') 
         // Left and right controls
         a.left.carousel-control(href='#myCarousel', role='button', data-slide='prev')
           span.glyphicon.glyphicon-chevron-left(aria-hidden='true')

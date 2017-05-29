@@ -15,38 +15,6 @@ app.set('views', './views');
 app.use(bootstrap.serve);
 app.use(bodyPaser.urlencoded({extended:false}));
 
-////--------- ClearDB(mysql) Setting -------------------
-//var mysql      = require('mysql');
-//var db_config = {
-//  host     : 'us-cdbr-iron-east-03.cleardb.net', 
-//  user     : 'b52b1fabc5d89f',
-//  password : '3fda8c47',
-//  database : 'heroku_e54ff6534eba235'
-//};
-//var connection;
-//
-//function handleDisconnect() {
-//  connection = mysql.createConnection(db_config);
-//  connection.connect(function(err) {              
-//    if(err) {
-//      console.log('error when connecting to db:', err);
-//      setTimeout(handleDisconnect, 2000);
-//    }                                     
-//  });                                     
-//                                          
-//  connection.on('error', function(err) {
-//    console.log('db error', err);
-//    if(err.code === 'PROTOCOL_CONNECTION_LOST') {
-//      handleDisconnect();                         
-//    } else {
-//      throw err;                                  
-//    }
-//  });
-//}
-//
-//
-//handleDisconnect();
-
 //------------ Pages Routing -------------------------
   //------------ main(search) page -------------------------
 app.get('/', function(req,res){
@@ -57,7 +25,6 @@ app.get('/', function(req,res){
 app.get('/homeplus', function(req,res){
   res.render('homeplus');
 });
-
   //------------ sub(jejuair_2000) page -------------------------
 app.get('/jejuair_2000', function(req,res){
   res.render('jejuair_2000');
@@ -74,24 +41,6 @@ app.get('/jejuair_kimsoohyun', function(req,res){
 app.get('/jejuair_newflight', function(req,res){
   res.render('jejuair_newflight');
 });
-//  //------------ 결과 페이지 난이도 조건만 넣음 ---------------
-//
-//app.post('/return', function(req,res){  
-//  var province_code = req.body.province_code;
-//  var duration_rate_code = req.body.duration_rate_code;
-//  var difficulty_type_code = req.body.difficulty_type_code;  
-//  var budget = req.body.budget;
-//  var route_type_code = req.body.route_type_code;
-//  var sql = 'SELECT * FROM course_table WHERE province_code = ? and duration_rate_code = ? and difficulty_type_code <= ? and budget <= ? and route_type_code = ? limit 4';
-//  connection.query(sql, [province_code, duration_rate_code, difficulty_type_code, budget, route_type_code], function(err, gilhub, fields){
-//    if(err){
-//      console.log(err);
-//      res.status(500).send('what the hell!');
-//      }
-//    res.render('return',{gilhub:gilhub});   
-//  });
-//});
-
 //----- node.js tutorial's app.listen method -----
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
