@@ -53,9 +53,26 @@ app.get('/', function(req,res){
   res.render('intro');
 });
 
-  //------------ sub(about) page -------------------------
-app.get('/about_us', function(req,res){
-  res.render('about_us');
+  //------------ sub(homeplus) page -------------------------
+app.get('/homeplus', function(req,res){
+  res.render('homeplus');
+});
+
+  //------------ sub(jejuair_2000) page -------------------------
+app.get('/jejuair_2000', function(req,res){
+  res.render('jejuair_2000');
+});
+  //------------ sub(jejuair_parent) page -------------------------
+app.get('/jejuair_parent', function(req,res){
+  res.render('jejuair_parent');
+});
+  //------------ sub(jejuair_kimsoohyun) page -------------------------
+app.get('/jejuair_kimsoohyun', function(req,res){
+  res.render('jejuair_kimsoohyun');
+});
+  //------------ sub(jejuair_newflight) page -------------------------
+app.get('/jejuair_newflight', function(req,res){
+  res.render('jejuair_newflight');
 });
 //  //------------ 결과 페이지 난이도 조건만 넣음 ---------------
 //
